@@ -20,7 +20,8 @@ namespace TPSeriesAjax.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.Series = BD.GetSeries();
+            BD MiBD = new BD();
+            ViewBag.Series = MiBD.GetSeries();
             return View();
         }
 
@@ -30,17 +31,20 @@ namespace TPSeriesAjax.Controllers
         }
         public List<Temporada> VerTemporadas(int IdSerie)
         {
-            return BD.GetTemporadas(IdSerie);
+            BD MiBD = new BD();
+            return MiBD.GetTemporadas(IdSerie);
         }
 
         public List<Actor> VerActores(int IdSerie)
         {
-            return BD.GetActores(IdSerie);
+            BD MiBD = new BD();
+            return MiBD.GetActores(IdSerie);
         }
         
         public Serie VerInfo(int IdSerie)
         {
-            return BD.GetInfo(IdSerie);
+            BD MiBD = new BD();
+            return MiBD.GetInfo(IdSerie);
         }
 
 
