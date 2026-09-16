@@ -28,9 +28,10 @@ function GetActores(idserie,tituloSerie)
     })
     .then(response => response.json())
     .then(data => {
-         document.getElementById("ModalTitle").innerHTML = "Actores de la serie " + tituloSerie ;
-            let body="";
-            data.forEach(item => {
+        let tituloSerie = document.getElementById("ModalTitle");
+        tituloSerie.innerHTML = "Actores de la serie " + tituloSerie ;
+        let body="";
+        data.forEach(item => {
                 body += item.nombre + "<br>";
             }); 
             document.getElementById("ModalBody").innerHTML = body;
@@ -55,5 +56,4 @@ function GetInfo(idserie)
     .catch((error) => {
         console.error('Error:', error);
     });
-
 }
