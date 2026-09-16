@@ -11,14 +11,17 @@
     <div class="row">
         @foreach (Serie item in ViewBag.Series)
         {
-            <div class="col-12 col-md-4 pb-4">
+            <div class="col-12 col-md-6 pb-4">
                 <div class="card w-100">
                     <img src="@item.ImagenSerie" class="card-img-top" alt="@item.Nombre">
                     <div class="card-body">
                         <h5 class="card-title">@item.Nombre</h5>
-                        <button class="btn btn-danger" data-toggle="modal" data-target="#ModalSerie" onclick="GetTemporadas(@item.IdSerie,'@item.Nombre')">Temporadas</button>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#ModalSerie" onclick="GetActores(@item.IdSerie,'@item.Nombre')">Actores</button>
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#ModalSerie" onclick="GetInfo(@item.IdSerie)">Mas info</button>
+                        <button onclick="GetTemporadas(@item.IdSerie,'@item.Nombre')" 
+                            class="btn btn-danger" data-toggle="modal" data-target="#ModalSerie" >Temporadas</button>
+                        <button onclick="GetActores(@item.IdSerie,'@item.Nombre')" 
+                            class="btn btn-success" data-toggle="modal" data-target="#ModalSerie">Actores</button>
+                        <button onclick="GetInfo(@item.IdSerie)"  
+                            class="btn btn-warning" data-toggle="modal" data-target="#ModalSerie" >Mas info</button>
                     </div>
                 </div>                
             </div>

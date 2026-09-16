@@ -9,12 +9,12 @@ function GetTemporadas(idserie,tituloSerie)
     })
     .then(response => response.json())
     .then(data => {
-        $("#ModalTitle").text("Temporadas de la serie " + tituloSerie);
+        document.getElementById("ModalTitle").innerHTML = "Temporadas de la serie " + tituloSerie;
          let body="";
             data.forEach(item => {
                 body += item.numeroTemporada + " " + item.tituloTemporada + "<br>";
             }); 
-            $("#ModalBody").html(body);
+            document.getElementById("ModalBody").innerHTML = body;
         })
     .catch((error) => {
         console.error('Error:', error);
@@ -28,12 +28,12 @@ function GetActores(idserie,tituloSerie)
     })
     .then(response => response.json())
     .then(data => {
-         $("#ModalTitle").text("Actores de la serie " + tituloSerie);
+         document.getElementById("ModalTitle").innerHTML = "Actores de la serie " + tituloSerie ;
             let body="";
             data.forEach(item => {
                 body += item.nombre + "<br>";
             }); 
-            $("#ModalBody").html(body);
+            document.getElementById("ModalBody").innerHTML = body;
         })
     .catch((error) => {
         console.error('Error:', error);
@@ -48,9 +48,9 @@ function GetInfo(idserie)
     })
     .then(response => {console.log(response); return response.json();})
     .then(data => {
-         $("#ModalTitle").text("Serie " + data.nombre);
-            const body = data.añoInicio + "<br>" + data.sinopsis;
-            $("#ModalBody").html(body);  
+         document.getElementById("ModalTitle").innerHTML = "Serie " + data.nombre;
+         const body = data.añoInicio + "<br>" + data.sinopsis;
+         document.getElementById("ModalBody").innerHTML = body; 
         })
     .catch((error) => {
         console.error('Error:', error);
