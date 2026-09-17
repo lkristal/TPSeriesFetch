@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TPSeriesAjax")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c03f4d8fcdedde2d0c2b18d691cf0a341911f133")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+faf82b3b3df0241b3ab0791a27dea9423ce5d11d")]
 [assembly: System.Reflection.AssemblyProductAttribute("TPSeriesAjax")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TPSeriesAjax")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
